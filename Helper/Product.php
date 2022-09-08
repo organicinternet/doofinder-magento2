@@ -342,7 +342,8 @@ class Product extends AbstractHelper
     {
         if ($product->hasData($field)) {
             return $this->imageHelper
-                ->init($product, 'doofinder_' . $field)
+                ->init($product, 'product_page_image_small')
+                ->setImageFile($product->getImage())
                 ->resize($size)
                 ->getUrl();
         }

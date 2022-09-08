@@ -103,6 +103,11 @@ class Product implements MapInterface
                 );
 
             case 'image_link':
+                return $this->getProductImage(
+                    $product,
+                    '180',
+                    'image'
+                );
                 return $this->getProductImageLink($product);
 
             case 'df_grouping_id':
