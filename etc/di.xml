@@ -70,4 +70,11 @@
             </argument>
         </arguments>
     </type>
+    <type name="Magento\Framework\Console\CommandList">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="doo_execute_full_re_index" xsi:type="object">Doofinder\Feed\Console\Command\PerformFullReIndex</item>
+            </argument>
+        </arguments>
+    </type>
 </config>
