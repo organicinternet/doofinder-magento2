@@ -111,6 +111,8 @@ class Product implements MapInterface
                 return $this->isGroupLeader($product);
             case 'df_regular_price':
                 return $this->getProductPrice($product, 'regular_price');
+            case 'no_tax_price':
+                return $this->productHelper->getProductPrice($product, 'final_price', false);
 
             case 'df_sale_price':
                 $salePrice = $this->getProductPrice($product, 'final_price');

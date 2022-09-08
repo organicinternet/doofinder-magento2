@@ -55,6 +55,7 @@
                 <item name="categories" xsi:type="string">category_ids</item>
                 <item name="link" xsi:type="string">url_key</item>
                 <item name="price" xsi:type="string">df_regular_price</item>
+                <item name="no_tax_price" xsi:type="string">no_tax_price</item>
                 <item name="sale_price" xsi:type="string">df_sale_price</item>
                 <item name="best_price" xsi:type="string">minimal_price</item>
                 <item name="availability" xsi:type="string">df_availability</item>
