@@ -341,11 +341,15 @@ class Product extends AbstractHelper
     public function getProductImageUrl(ProductModel $product, ?string $size = null, ?string $field = 'image'): ?string
     {
         if ($product->hasData($field)) {
-            return $this->imageHelper
+            $imageUrl = $this->imageHelper
                 ->init($product, 'product_page_image_small')
                 ->setImageFile($product->getImage())
                 ->resize($size)
                 ->getUrl();
+            if (strpos($imageUrl, 'placeholder/.jpg')) {
+                $imageUrl = $this->imageHelper->getDefaultPlaceholderUrl('thumbnail');
+            }
+            return $imageUrl;
         }
 
         return null;
